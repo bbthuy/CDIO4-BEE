@@ -1,0 +1,27 @@
+
+services:
+  cdo4__mysql:
+    image: mysql:8.0
+    container_name: cdo4__mysql
+    env_file: .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DATABASE_DATABASE}
+      MYSQL_USER: ${DATABASE_USER}
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD}
+    ports:
+      - '3307:3306'
+    volumes:
+      - cdo4__mysql_data:/var/lib/mysql
+      - ./database/init:/docker-entrypoint-initdb.d
+    networks:
+      - cdo4__network
+    command: --default-authentication-plugin=mysql_native_password
+
+volumes:
+  cdo4__mysql_data:
+    driver: local
+
+networks:
+  cdo4__network:
+    driver: bridge

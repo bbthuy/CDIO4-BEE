@@ -1,0 +1,110 @@
+### Register new user account
+POST http://localhost:4421/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "password": "Password123!",
+  "confirmPassword": "Password123!"
+}
+
+### Register with invalid password (too short)
+POST http://localhost:4421/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "email": "jane.smith@example.com",
+  "password": "123",
+  "confirmPassword": "123"
+}
+
+### Register with password mismatch
+POST http://localhost:4421/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "Bob",
+  "lastName": "Wilson",
+  "email": "bob.wilson@example.com",
+  "password": "Password123!",
+  "confirmPassword": "Password456!"
+}
+
+### Register with invalid email
+POST http://localhost:4421/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "Alice",
+  "lastName": "Johnson",
+  "email": "invalid-email",
+  "password": "Password123!",
+  "confirmPassword": "Password123!"
+}
+
+### Login with registered user
+POST http://localhost:4421/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "Password123!"
+} 
+
+### Register like the FE (no confirmPassword) -> data.verificationToken, code is sent by email (and printed in the BE console in dev)
+POST http://localhost:4421/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "An",
+  "lastName": "Nguyen",
+  "email": "an.nguyen@example.com",
+  "password": "Password123!"
+}
+
+### Activate the account
+POST http://localhost:4421/api/v1/auth/verification-codes/verify
+Content-Type: application/json
+
+{
+  "token": "<verificationToken>",
+  "code": "123456"
+}
+
+### Resend the activation code
+POST http://localhost:4421/api/v1/auth/verification-codes
+Content-Type: application/json
+
+{
+  "email": "an.nguyen@example.com"
+}
+
+### Forgot password - step 1: send the code
+POST http://localhost:4421/api/v1/auth/password-resets
+Content-Type: application/json
+
+{
+  "email": "an.nguyen@example.com"
+}
+
+### Forgot password - step 2: verify the code -> data.token
+POST http://localhost:4421/api/v1/auth/password-resets/verify
+Content-Type: application/json
+
+{
+  "token": "<token from step 1>",
+  "code": "123456"
+}
+
+### Forgot password - step 3: set the new password
+PUT http://localhost:4421/api/v1/auth/password
+Content-Type: application/json
+
+{
+  "token": "<token from step 2>",
+  "newPassword": "NewPassword123!"
+}
