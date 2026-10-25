@@ -1,3 +1,7 @@
+docker compose up -d
+npm install
+npm run start:dev
+
 ### Hosted Page API
 
 #### This project will contain all necessary APIs required for Hosted Page.
