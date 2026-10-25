@@ -1,6 +1,6 @@
-docker compose up -d
-npm install
-npm run start:dev
+# docker compose up -d
+# npm install
+# npm run start:dev
 
 ### Hosted Page API
 
