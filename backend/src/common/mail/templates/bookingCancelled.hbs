@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>CLINIC CARE - THÔNG BÁO HỦY LỊCH HẸN</title>
+    <style>
+      /* (Giữ nguyên CSS của bạn) */ body { line-height: 1.5; background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased;
+      font-size: 14px; margin: 0; padding: 0; } .container { max-width: 580px; margin: 0 auto; padding: 10px; } .main { background: #ffffff; border-radius: 3px;
+      } .wrapper { padding: 40px; } .header-box { background: #f44336; color: white; padding: 20px; text-align: center; border-radius: 3px 3px 0 0; } .alert-box
+      { background-color: #fff5f5; border: 1px solid #ffcdd2; border-radius: 5px; padding: 15px; margin: 20px 0; color: #c62828; } .btn-primary {
+      background-color: #8A48CD; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; }
+      .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; }
+    </style>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='main'>
+        <div class='header-box'>
+          <h2 style='margin:0;'>🚫 THÔNG BÁO HỦY LỊCH</h2>
+        </div>
+
+        <div class='wrapper'>
+          <p>Xin chào <strong>{{patientName}}</strong>,</p>
+          <p>Rất tiếc phải thông báo rằng lịch hẹn khám bệnh của bạn đã bị hủy.</p>
+
+          <div class='alert-box'>
+            <p><strong>Bác sĩ:</strong> {{doctorName}}</p>
+            <p><strong>Thời gian:</strong> {{time}} - {{date}}</p>
+            <hr style='border: 0; border-top: 1px dashed #ffcdd2; margin: 10px 0;' />
+            <p><strong>Lý do hủy:</strong> {{reason}}</p>
+          </div>
+
+          <p>Nếu bạn đã thanh toán phí khám online, số tiền sẽ được hoàn lại theo chính sách của chúng tôi. Vui lòng liên hệ hotline nếu cần hỗ trợ gấp.</p>
+
+          <div style='text-align: center; margin-top: 30px;'>
+            <a href='{{websiteUrl}}' class='btn-primary'>Đặt lại lịch khác</a>
+          </div>
+
+          <p style='margin-top: 30px; font-size: 13px; color: #999;'>
+            Trân trọng,<br />CLINIC CARE
+          </p>
+        </div>
+      </div>
+
+      <div class='footer'>
+        Email tự động từ CLINIC CARE<br />
+        Hotline: 0835090938
+      </div>
+    </div>
+  </body>
+</html>

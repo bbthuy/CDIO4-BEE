@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>LỊCH KHÁM ONLINE ĐÃ ĐƯỢC XÁC NHẬN</title>
+    <style>
+      /* Base styles */ body { font-family: sans-serif; background-color: #f6f6f6; margin: 0; padding: 0; } .container { max-width: 580px; margin: 0 auto;
+      padding: 10px; } .main { background: #ffffff; border-radius: 5px; overflow: hidden; } /* Header màu xanh dương cho Online */ .header-box { background:
+      linear-gradient(135deg, #2196F3 0%, #1976D2 100%); color: white; padding: 30px; text-align: center; } .header-icon { font-size: 48px; margin-bottom: 10px;
+      } h5 { font-size: 18px; margin: 0; } .content-box { padding: 30px; } .success-message { background: #e3f2fd; border: 2px solid #2196F3; border-radius:
+      10px; padding: 20px; text-align: center; margin-bottom: 20px; } .success-message h6 { color: #1565c0; margin: 0 0 10px 0; font-size: 18px; }
+      .success-message p { color: #0d47a1; margin: 5px 0; font-size: 14px; } /* Appointment Card */ .appointment-card { border: 1px solid #eee; border-radius:
+      10px; padding: 20px; margin-bottom: 20px; } .detail-row { display: flex; align-items: center; margin-bottom: 15px; } .icon { font-size: 20px;
+      margin-right: 15px; width: 30px; text-align: center; } .label { font-size: 12px; color: #666; display: block; } .value { font-size: 15px; font-weight:
+      bold; color: #333; } /* Nút vào họp nổi bật */ .meeting-btn-container { text-align: center; margin: 25px 0; } .meeting-btn { display: inline-block;
+      background-color: #2196F3; color: white !important; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 16px;
+      box-shadow: 0 4px 10px rgba(33, 150, 243, 0.4); transition: transform 0.2s; } .meeting-btn:hover { transform: translateY(-2px); } /* Footer */ .footer {
+      text-align: center; font-size: 12px; color: #999; padding: 20px; } .note { background: #fff3e0; padding: 15px; border-radius: 5px; font-size: 13px; color:
+      #e65100; margin-top: 20px; }
+    </style>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='main'>
+        <div class='header-box'>
+          <div class='header-icon'>💻</div>
+          <h5><strong>Lịch khám Online đã xác nhận</strong></h5>
+        </div>
+
+        <div class='content-box'>
+          <p>Xin chào <strong>{{patientName}}</strong>,</p>
+
+          <div class='success-message'>
+            <h6>Đã thanh toán thành công!</h6>
+            <p>Bác sĩ <strong>{{doctorName}}</strong> đã sẵn sàng gặp bạn.</p>
+          </div>
+
+          <div class='meeting-btn-container'>
+            <p style='margin-bottom: 10px; color: #666;'>Bấm vào nút bên dưới để tham gia:</p>
+            <a href='{{meetingLink}}' class='meeting-btn'>
+              📹 Vào Phòng Khám Ngay
+            </a>
+          </div>
+
+          <div class='appointment-card'>
+            <div class='detail-row'>
+              <span class='icon'>👨‍⚕️</span>
+              <div><span class='label'>Bác sĩ</span><span class='value'>{{doctorName}}</span></div>
+            </div>
+            <div class='detail-row'>
+              <span class='icon'>🕒</span>
+              <div><span class='label'>Thời gian</span><span class='value'>{{time}} - {{date}}</span></div>
+            </div>
+            <div class='detail-row'>
+              <span class='icon'>💰</span>
+              <div><span class='label'>Chi phí</span><span class='value'>{{price}} VNĐ (Đã thanh toán)</span></div>
+            </div>
+          </div>
+
+          <div class='note'>
+            <strong>Lưu ý quan trọng:</strong>
+            <ul style='margin: 5px 0 0 20px; padding: 0;'>
+              <li>Vui lòng kiểm tra Camera và Micro trước khi vào.</li>
+              <li>Tìm không gian yên tĩnh để cuộc gọi đạt chất lượng tốt nhất.</li>
+              <li>Nếu gặp sự cố, gọi ngay hotline: <strong>0835090938</strong></li>
+            </ul>
+          </div>
+
+          <div style='text-align: center; margin-top: 20px;'>
+            <a href='{{addToGoogleCalendarUrl}}' style='color: #2196F3; text-decoration: none; margin-right: 15px; font-weight: bold;'>+ Google Calendar</a>
+            <a href='{{addToOutlookCalendarUrl}}' style='color: #2196F3; text-decoration: none; font-weight: bold;'>+ Outlook</a>
+          </div>
+        </div>
+      </div>
+      <div class='footer'>CLINIC CARE - Hệ thống khám bệnh từ xa</div>
+    </div>
+  </body>
+</html>

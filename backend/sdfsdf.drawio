@@ -1,0 +1,200 @@
+<mxfile host="opp.diagrams.net" type="device">
+  <diagram id="Trong-1" name="Medical_Booking_Schema">
+    <mxGraphModel dx="1600" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- ==================================== -->
+        <!-- Entity Styles -->
+        <!-- ==================================== -->
+        <UserObject id="entityStyle" label="Tên Bảng" template="entity">
+          <mxCell style="shape=table;html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+            <mxGeometry x="0" y="0" width="180" height="40" as="geometry"/>
+          </mxCell>
+        </UserObject>
+        <UserObject id="attributeStyle" label="Tên Thuộc Tính" template="attribute">
+          <mxCell style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b658;" vertex="1" parent="1">
+            <mxGeometry x="0" y="0" width="180" height="30" as="geometry"/>
+          </mxCell>
+        </UserObject>
+
+        <!-- ==================================== -->
+        <!-- 1. nguoi_dung (User) -->
+        <!-- ==================================== -->
+        <mxCell id="NguoiDung" value="&lt;b&gt;nguoi_dung&lt;/b&gt;" style="shape=table;html=1;whiteSpace=wrap;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="100" y="50" width="220" height="230" as="geometry">
+            <mxRectangle as="alternateBounds" width="220" height="30"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NguoiDung_Fields" value="&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;u&gt;id&lt;/u&gt; &lt;i&gt;BIGINT (PK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;first_name VARCHAR(50)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;last_name VARCHAR(50)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;email VARCHAR(100) (U)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;password VARCHAR(255)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;role VARCHAR(30) (admin, doctor, patient)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;refresh_token TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;is_project_owner BOOLEAN&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;created_at DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;updated_at DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;deleted_at DATETIME&lt;/p&gt;" style="tableRow" vertex="1" parent="NguoiDung">
+          <mxGeometry y="30" width="220" height="200" as="geometry"/>
+        </mxCell>
+        
+        <!-- ==================================== -->
+        <!-- 2. chuyen_khoa (Specialty) -->
+        <!-- ==================================== -->
+        <mxCell id="ChuyenKhoa" value="&lt;b&gt;chuyen_khoa&lt;/b&gt;" style="shape=table;html=1;whiteSpace=wrap;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="50" width="180" height="100" as="geometry">
+            <mxRectangle as="alternateBounds" width="180" height="30"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ChuyenKhoa_Fields" value="&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;u&gt;id&lt;/u&gt; &lt;i&gt;BIGINT (PK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;name VARCHAR(100)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;description TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;created_at DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;updated_at DATETIME&lt;/p&gt;" style="tableRow" vertex="1" parent="ChuyenKhoa">
+          <mxGeometry y="30" width="180" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================================== -->
+        <!-- 3. bac_si (Doctor) -->
+        <!-- ==================================== -->
+        <mxCell id="BacSi" value="&lt;b&gt;bac_si&lt;/b&gt;" style="shape=table;html=1;whiteSpace=wrap;startSize=30;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="450" y="270" width="250" height="240" as="geometry">
+            <mxRectangle as="alternateBounds" width="250" height="30"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BacSi_Fields" value="&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;u&gt;id&lt;/u&gt; &lt;i&gt;BIGINT (PK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;user_id&lt;/b&gt; &lt;i&gt;BIGINT (FK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;specialty_id&lt;/b&gt; &lt;i&gt;BIGINT (FK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;avatar TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;experience_years INT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;consultation_fee DECIMAL(12,2)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;bio TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;education TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;certificates TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;created_at DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;updated_at DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;deleted_at DATETIME&lt;/p&gt;" style="tableRow" vertex="1" parent="BacSi">
+          <mxGeometry y="30" width="250" height="210" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================================== -->
+        <!-- 4. lich_kham (Schedule) -->
+        <!-- ==================================== -->
+        <mxCell id="LichKham" value="&lt;b&gt;lich_kham&lt;/b&gt;" style="shape=table;html=1;whiteSpace=wrap;startSize=30;fillColor=#f5f5f5;strokeColor=#666666;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="800" y="270" width="220" height="200" as="geometry">
+            <mxRectangle as="alternateBounds" width="220" height="30"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LichKham_Fields" value="&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;u&gt;id&lt;/u&gt; &lt;i&gt;BIGINT (PK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;doctor_id&lt;/b&gt; &lt;i&gt;BIGINT (FK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;date DATE&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;start_time TIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;end_time TIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;appointment_type VARCHAR(30)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;max_patients INT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;booked_patients INT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;created_at DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;updated_at DATETIME&lt;/p&gt;" style="tableRow" vertex="1" parent="LichKham">
+          <mxGeometry y="30" width="220" height="170" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================================== -->
+        <!-- 5. dat_lich (Booking) -->
+        <!-- ==================================== -->
+        <mxCell id="DatLich" value="&lt;b&gt;dat_lich&lt;/b&gt;" style="shape=table;html=1;whiteSpace=wrap;startSize=30;fillColor=#fff2cc;strokeColor=#d6b658;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="100" y="380" width="240" height="180" as="geometry">
+            <mxRectangle as="alternateBounds" width="240" height="30"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DatLich_Fields" value="&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;u&gt;id&lt;/u&gt; &lt;i&gt;BIGINT (PK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;schedule_id&lt;/b&gt; &lt;i&gt;BIGINT (FK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;user_id&lt;/b&gt; &lt;i&gt;BIGINT (FK - Bệnh nhân)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;status VARCHAR(30)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;note TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;cancel_reason TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;is_reminder_sent BOOLEAN&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;price DECIMAL(12,2)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;created_at DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;updated_at DATETIME&lt;/p&gt;" style="tableRow" vertex="1" parent="DatLich">
+          <mxGeometry y="30" width="240" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================================== -->
+        <!-- 6. ho_so_benh_an (Medical Record) -->
+        <!-- ==================================== -->
+        <mxCell id="HoSoBenhAn" value="&lt;b&gt;ho_so_benh_an&lt;/b&gt;" style="shape=table;html=1;whiteSpace=wrap;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="450" y="600" width="250" height="200" as="geometry">
+            <mxRectangle as="alternateBounds" width="250" height="30"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HoSoBenhAn_Fields" value="&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;u&gt;id&lt;/u&gt; &lt;i&gt;BIGINT (PK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;booking_id&lt;/b&gt; &lt;i&gt;BIGINT (FK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;patient_id&lt;/b&gt; &lt;i&gt;BIGINT (FK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;doctor_id&lt;/b&gt; &lt;i&gt;BIGINT (FK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;subjective TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;objective TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;assessment TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;plan TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;diagnosis TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;prescription TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;created_at DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;updated_at DATETIME&lt;/p&gt;" style="tableRow" vertex="1" parent="HoSoBenhAn">
+          <mxGeometry y="30" width="250" height="170" as="geometry"/>
+        </mxCell>
+        
+        <!-- ==================================== -->
+        <!-- 7. thanh_toan (Payment) -->
+        <!-- ==================================== -->
+        <mxCell id="ThanhToan" value="&lt;b&gt;thanh_toan&lt;/b&gt;" style="shape=table;html=1;whiteSpace=wrap;startSize=30;fillColor=#e6e6e6;strokeColor=#999999;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="10" y="670" width="220" height="170" as="geometry">
+            <mxRectangle as="alternateBounds" width="220" height="30"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ThanhToan_Fields" value="&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;u&gt;id&lt;/u&gt; &lt;i&gt;BIGINT (PK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;orderCode VARCHAR(100)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;amount DECIMAL(12,2)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;status VARCHAR(30)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;transactionId VARCHAR(100)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;description TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;user_id&lt;/b&gt; &lt;i&gt;BIGINT (FK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;booking_id&lt;/b&gt; &lt;i&gt;BIGINT (FK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;createdAt DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;updatedAt DATETIME&lt;/p&gt;" style="tableRow" vertex="1" parent="ThanhToan">
+          <mxGeometry y="30" width="220" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================================== -->
+        <!-- 8. kham_online (Online Consultation) -->
+        <!-- ==================================== -->
+        <mxCell id="KhamOnline" value="&lt;b&gt;kham_online&lt;/b&gt;" style="shape=table;html=1;whiteSpace=wrap;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="800" y="550" width="250" height="190" as="geometry">
+            <mxRectangle as="alternateBounds" width="250" height="30"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KhamOnline_Fields" value="&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;u&gt;id&lt;/u&gt; &lt;i&gt;BIGINT (PK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;booking_id&lt;/b&gt; &lt;i&gt;BIGINT (FK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;consultation_type VARCHAR(30)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;status VARCHAR(30)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;meeting_url TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;recording_url TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;started_at DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;ended_at DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;created_at DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;updated_at DATETIME&lt;/p&gt;" style="tableRow" vertex="1" parent="KhamOnline">
+          <mxGeometry y="30" width="250" height="160" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================================== -->
+        <!-- 9. tin_nhan_kham (Consultation Message) -->
+        <!-- ==================================== -->
+        <mxCell id="TinNhanKham" value="&lt;b&gt;tin_nhan_kham&lt;/b&gt;" style="shape=table;html=1;whiteSpace=wrap;startSize=30;fillColor=#fce5cd;strokeColor=#d6b658;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="800" y="800" width="250" height="170" as="geometry">
+            <mxRectangle as="alternateBounds" width="250" height="30"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TinNhanKham_Fields" value="&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;u&gt;id&lt;/u&gt; &lt;i&gt;BIGINT (PK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;consultation_id&lt;/b&gt; &lt;i&gt;BIGINT (FK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;sender_id&lt;/b&gt; &lt;i&gt;BIGINT (FK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;message_type VARCHAR(30)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;content TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;attachment_url TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;sent_at DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;is_read BOOLEAN&lt;/p&gt;" style="tableRow" vertex="1" parent="TinNhanKham">
+          <mxGeometry y="30" width="250" height="140" as="geometry"/>
+        </mxCell>
+        
+        <!-- ==================================== -->
+        <!-- 10. noi_dung_cho_duyet (Pending Content) -->
+        <!-- ==================================== -->
+        <mxCell id="NoiDungChoDuyet" value="&lt;b&gt;noi_dung_cho_duyet&lt;/b&gt;" style="shape=table;html=1;whiteSpace=wrap;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="50" width="250" height="160" as="geometry">
+            <mxRectangle as="alternateBounds" width="250" height="30"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NoiDungChoDuyet_Fields" value="&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;u&gt;id&lt;/u&gt; &lt;i&gt;BIGINT (PK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;user_question TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;ai_response TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;detected_keyword VARCHAR(255)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;status VARCHAR(30)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;admin_id&lt;/b&gt; &lt;i&gt;BIGINT (FK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;created_at DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;approved_at DATETIME&lt;/p&gt;" style="tableRow" vertex="1" parent="NoiDungChoDuyet">
+          <mxGeometry y="30" width="250" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================================== -->
+        <!-- 11. noi_dung_da_duyet (Approved Content) -->
+        <!-- ==================================== -->
+        <mxCell id="NoiDungDaDuyet" value="&lt;b&gt;noi_dung_da_duyet&lt;/b&gt;" style="shape=table;html=1;whiteSpace=wrap;startSize=30;fillColor=#f7cced;strokeColor=#d10073;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="300" width="250" height="150" as="geometry">
+            <mxRectangle as="alternateBounds" width="250" height="30"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NoiDungDaDuyet_Fields" value="&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;u&gt;id&lt;/u&gt; &lt;i&gt;BIGINT (PK)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;keyword VARCHAR(255)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;category VARCHAR(100)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;response_template TEXT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;approved_by&lt;/b&gt; &lt;i&gt;BIGINT (FK - Admin)&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;approved_at DATETIME&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left&quot;&gt;&lt;b&gt;source_pending_id&lt;/b&gt; &lt;i&gt;BIGINT (FK)&lt;/i&gt;&lt;/p&gt;" style="tableRow" vertex="1" parent="NoiDungDaDuyet">
+          <mxGeometry y="30" width="250" height="120" as="geometry"/>
+        </mxCell>
+
+
+        <!-- ==================================== -->
+        <!-- Relationships (Edges) -->
+        <!-- ==================================== -->
+        
+        <!-- R1: nguoi_dung (1) <-> (1) bac_si -->
+        <mxCell id="R1" value="Là tài khoản của Bác sĩ" style="endArrow=ERone;endFill=1;startArrow=ERone;startFill=1;html=1;fontFamily=Helvetica;fontSize=10;labelBackgroundColor=white;strokeColor=#6c8ebf;" edge="1" parent="1" source="NguoiDung" target="BacSi">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="160" as="sourcePoint"/>
+            <mxPoint x="450" y="320" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="380" y="160"/>
+              <mxPoint x="380" y="390"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- R2: chuyen_khoa (1) <-> (N) bac_si -->
+        <mxCell id="R2" value="Có chuyên môn" style="endArrow=ERmandMany;endFill=0;startArrow=ERone;startFill=1;html=1;fontFamily=Helvetica;fontSize=10;labelBackgroundColor=white;strokeColor=#82b366;" edge="1" parent="1" source="ChuyenKhoa" target="BacSi">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="150" as="sourcePoint"/>
+            <mxPoint x="575" y="270" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- R3: bac_si (1) <-> (N) lich_kham -->
+        <mxCell id="R3" value="Tạo nhiều lịch khám" style="endArrow=ERmandMany;endFill=0;startArrow=ERone;startFill=1;html=1;fontFamily=Helvetica;fontSize=10;labelBackgroundColor=white;strokeColor=#b85450;" edge="1" parent="1" source="BacSi" target="LichKham">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="395" as="sourcePoint"/>
+            <mxPoint x="800" y="360" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- R4: lich_kham (1) <-> (N) dat_lich -->
+        <mxCell id="R4" value="Được đặt nhiều lần" style="endArrow=ERmandMany;endFill=0;startArrow=ERone;startFill=1;html=1;fontFamily=Helvetica;fontSize=10;labelBackgroundColor=white;strokeColor=#d6b658;" edge="1" parent="1" source="LichKham" target="DatLich">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="870" y="470" as="sourcePoint"/>
+            <mxPoint x="340" y="470" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="870" y="520"/>
+              <mxPoint x="360" y="520"/>
+              <mxPoint x="360" y="470"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- R5: ngu

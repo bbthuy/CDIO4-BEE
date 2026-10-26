@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>CLINIC CARE - NHẮC NHỞ LỊCH KHÁM</title>
+    <style>
+      /* Base styles */ body { line-height: 1.5; background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px;
+      margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } /* Table styles */ table { border-collapse: separate;
+      mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; } td { font-family: sans-serif; vertical-align: top; } /* Container styles */ .container {
+      display: block; max-width: 580px; padding: 10px; width: 580px; margin: 0 auto; } .content { box-sizing: border-box; display: block; margin: 0 auto;
+      max-width: 580px; padding: 10px; } .main { background: #ffffff; border-radius: 3px; } .wrapper { box-sizing: border-box; padding: 40px; } /* Header */
+      .header-box { background-color: #8A48CD; color: white; padding: 25px; text-align: center; border-radius: 3px 3px 0 0; } .header-box h5 { color: white;
+      margin: 0; font-size: 22px !important; } /* Text styles */ h5 { font-family: sans-serif; font-size: 18px !important; font-weight: normal; margin: 0 0 15px
+      0; text-align: center; } p { font-family: sans-serif; font-weight: normal; margin: 0 0 15px 0; } /* Info box */ .info-box { background-color: #f9f9f9;
+      border: 1px solid #ddd; border-radius: 5px; padding: 20px; margin: 20px 0; } .info-box p { margin: 10px 0; color: #333; } .info-item { padding: 10px 0;
+      border-bottom: 1px solid #e0e0e0; } .info-item:last-child { border-bottom: none; } /* Alert highlight */ .alert-highlight { background-color: #fff3cd;
+      border-left: 4px solid #ffc107; padding: 15px; border-radius: 5px; margin: 20px 0; } .alert-highlight p { margin: 5px 0; color: #856404; } /* Utility
+      classes */ .center { margin: auto; } .divider { border: 0.5px solid #8A48CD; margin-bottom: 15px; height: 0; } /* Footer styles */ .footer { clear: both;
+      margin-top: 10px; text-align: center; width: 100%; } .footer-text { padding: 20px 10px 10px 10px; font-size: 12px; line-height: 18px; color: #666666;
+      text-align: center; font-weight: normal; } .footer-address { padding: 10px; color: #999999; font-size: 12px; text-align: center; } .footer-copyright {
+      padding: 0px 40px 40px 40px; font-size: 12px; line-height: 18px; color: #666666; text-align: center; font-weight: normal; } /* Mobile responsive */ @media
+      only screen and (max-width: 620px) { .body h1 { font-size: 28px !important; margin-bottom: 10px !important; } .body p, .body ul, .body ol, .body td, .body
+      span, .body a { font-size: 16px !important; } .wrapper, .article { padding: 10px !important; } .content { padding: 0 !important; } .container { padding: 0
+      !important; width: 100% !important; } .main { border-left-width: 0 !important; border-radius: 0 !important; border-right-width: 0 !important; } }
+    </style>
+  </head>
+
+  <body>
+    <table role='presentation' class='body' bgcolor='#f6f6f6'>
+      <tr>
+        <td>&nbsp;</td>
+        <td class='container' width='580' valign='top'>
+          <div class='content'>
+            <!-- START CENTERED WHITE CONTAINER -->
+            <table role='presentation' class='main'>
+              <!-- HEADER -->
+              <tr>
+                <td class='header-box' valign='top'>
+                  <h5><strong>📅 Nhắc nhở lịch khám</strong></h5>
+                </td>
+              </tr>
+              <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td class='wrapper' valign='top'>
+                  <table role='presentation'>
+                    <tr>
+                      <td valign='top'>
+                        <p>Xin chào <strong>{{patientName}}</strong>,</p>
+
+                        <div class='alert-highlight'>
+                          <p><strong>⏰ Lịch khám sắp diễn ra!</strong></p>
+                          <p>Bạn có một lịch khám sắp diễn ra trong vòng 1 giờ tới. Vui lòng chuẩn bị và đến đúng giờ nhé.</p>
+                        </div>
+
+                        <div class='info-box'>
+                          <div class='info-item'>
+                            <p><strong>👨‍⚕️ Bác sĩ:</strong> {{doctorName}}</p>
+                          </div>
+                          <div class='info-item'>
+                            <p><strong>🕐 Thời gian:</strong> {{time}} - {{date}}</p>
+                          </div>
+                          <div class='info-item'>
+                            <p><strong>📋 Hình thức:</strong> {{appointmentType}}</p>
+                          </div>
+                        </div>
+
+                        <p style='font-size: 14px;'>
+                          Nếu bạn cần hỗ trợ, vui lòng liên hệ hotline của chúng tôi.
+                        </p>
+
+                        <p style='font-size: 14px; margin-bottom: 0;'>
+                          Trân trọng,
+                          <br />
+                          Clinic Care Team
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- END MAIN CONTENT AREA -->
+            </table>
+            <!-- END CENTERED WHITE CONTAINER -->
+
+            <!-- START FOOTER -->
+            <div class='footer'>
+              <table role='presentation'>
+                <tr>
+                  <td class='footer-text'>
+                    <p style='margin: 0;'>Email này được gửi từ <strong>no-reply@npis.com</strong></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='footer-address' valign='top' align='center'>
+                    <span class='apple-link'>120, Hoàng Minh Thảo, Đà Nẵng, Việt Nam</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='footer-copyright'>
+                    <p style='margin: 0;'>Copyright &copy; 2025 <b>CLINIC CARE</b>, All Rights Reserved.</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- END FOOTER -->
+          </div>
+        </td>
+        <td valign='top'>&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>

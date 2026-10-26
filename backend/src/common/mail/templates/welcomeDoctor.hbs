@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>CLINIC CARE – WELCOME DOCTOR</title>
+    <style>
+      body { line-height: 1.5; background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; margin: 0; padding: 0;
+      } table { border-collapse: separate; width: 100%; } .container { display: block; max-width: 580px; padding: 10px; width: 580px; margin: 0 auto; } .content
+      { box-sizing: border-box; display: block; margin: 0 auto; max-width: 580px; padding: 10px; } .main { background: #ffffff; border-radius: 3px; } .wrapper {
+      box-sizing: border-box; padding: 40px; } h5 { font-size: 18px !important; font-weight: normal; margin: 0 0 15px 0; text-align: center; } .btn-primary {
+      font-size: 16px; font-weight: 600; padding: 14px 22px; text-decoration: none; background-color: #8A48CD; border-color: #8A48CD; color: #ffffff;
+      border-radius: 6px; text-align: center; display: inline-block; line-height: 1; } .center { margin: auto; text-align: center; } .divider { border: 0.5px
+      solid #8A48CD; margin-bottom: 15px; } .footer { text-align: center; width: 100%; margin-top: 10px; } .footer-text { padding: 20px 10px 10px 10px;
+      font-size: 12px; color: #666666; }
+    </style>
+  </head>
+
+  <body>
+    <table role='presentation' class='body' bgcolor='#f6f6f6'>
+      <tr>
+        <td>&nbsp;</td>
+        <td class='container' width='580'>
+          <div class='content'>
+            <table role='presentation' class='main'>
+              <tr>
+                <td class='wrapper'>
+                  <table role='presentation'>
+                    <tr>
+                      <td>
+                        <h5><strong>Welcome to Clinic Care</strong></h5>
+                        <div class='divider'></div>
+
+                        <p>Hello Dr. {{name}},</p>
+
+                        <p>
+                          Congratulations! You have been officially added as a
+                          <strong>Doctor</strong>
+                          in the
+                          <strong>Clinic Care</strong>
+                          system.
+                        </p>
+
+                        <p>
+                          Below is your temporary login information:
+                        </p>
+
+                        <p><strong>Email:</strong> {{email}}</p>
+                        <p><strong>Temporary Password:</strong> {{password}}</p>
+
+                        <p>Please log in and change your password for security.</p>
+
+                        <div class='center' style='margin: 20px 0;'>
+                          <a href='{{loginLink}}' class='btn-primary' target='_blank'>
+                            Login to Clinic Care
+                          </a>
+                        </div>
+
+                        <p style='margin-top: 20px;'>
+                          If you believe this is a mistake, please contact us immediately at
+                          <a href='mailto:cliniccare@gmail.com'>cliniccare@gmail.com</a>.
+                        </p>
+
+                        <p style='margin-bottom: 0;'>
+                          Best regards,
+                          <br />
+                          <strong>Clinic Care Team</strong>
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <div class='footer'>
+              <p class='footer-text'>
+                This email was sent from
+                <strong>no-reply@cliniccare.com</strong>
+              </p>
+              <p class='footer-text'>
+                Clinic Care, 120 Hoàng Minh Thảo, Đà Nẵng, Việt Nam
+              </p>
+              <p class='footer-text'>
+                © 2025 Clinic Care. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
