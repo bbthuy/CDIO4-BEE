@@ -3,7 +3,7 @@ version: '3.8'
 services:
   cdo4__mysql:
     image: mysql:8.0
-    container_name: SE447__mysql
+    container_name: CLINICCARE__mysql
     env_file: .env
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
