@@ -1,0 +1,419 @@
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>CLINIC CARE - BÁC SĨ ĐÃ XÁC NHẬN LỊCH HẸN</title>
+    <style>
+      /* Base styles */ body { line-height: 1.5; background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px;
+      margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } /* Table styles */ table { border-collapse: separate;
+      mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; } td { font-family: sans-serif; vertical-align: top; } /* Container styles */ .container {
+      display: block; max-width: 580px; padding: 10px; width: 580px; margin: 0 auto; } .content { box-sizing: border-box; display: block; margin: 0 auto;
+      max-width: 580px; padding: 10px; } .main { background: #ffffff; border-radius: 3px; } .wrapper { box-sizing: border-box; padding: 40px; } /* Header */
+      .header-box { background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); color: white; padding: 30px; text-align: center; border-radius: 3px 3px 0 0;
+      } .header-box h5 { color: white; margin: 0; font-size: 24px !important; } .header-icon { font-size: 48px; margin-bottom: 10px; } /* Text styles */ h5 {
+      font-family: sans-serif; font-size: 18px !important; font-weight: normal; margin: 0 0 15px 0; text-align: center; } p { font-family: sans-serif;
+      font-weight: normal; margin: 0 0 15px 0; } /* Confirmed badge */ .confirmed-badge { display: inline-block; background-color: #4CAF50; color: white;
+      padding: 10px 25px; border-radius: 30px; font-size: 16px; font-weight: bold; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3); } /*
+      Success message box */ .success-message { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 2px solid #4CAF50; border-radius: 10px;
+      padding: 25px; margin: 25px 0; text-align: center; } .success-message h6 { color: #2e7d32; font-size: 20px; font-weight: bold; margin: 0 0 10px 0; }
+      .success-message p { color: #388e3c; margin: 5px 0; font-size: 15px; } /* Appointment details card */ .appointment-card { background: #ffffff; border: 2px
+      solid #4CAF50; border-radius: 12px; padding: 25px; margin: 25px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); } .appointment-card h6 { margin: 0 0 20px 0;
+      color: #4CAF50; font-size: 18px; font-weight: bold; text-align: center; padding-bottom: 15px; border-bottom: 2px solid #e8f5e9; } .detail-row {
+      background-color: #f9f9f9; padding: 15px; margin: 12px 0; border-radius: 8px; border-left: 4px solid #4CAF50; display: table; width: 100%; box-sizing:
+      border-box; } .detail-row .icon { font-size: 24px; margin-right: 10px; vertical-align: middle; } .detail-row .content { display: inline-block;
+      vertical-align: middle; } .detail-row .label { color: #666; font-size: 13px; display: block; margin-bottom: 3px; } .detail-row .value { font-size: 16px;
+      font-weight: bold; color: #333; display: block; } /* Calendar add button */ .calendar-section { background-color: #f0f8ff; border-radius: 8px; padding:
+      20px; margin: 25px 0; text-align: center; } .btn-add-calendar { display: inline-block; background-color: #2196F3; color: white; padding: 12px 30px;
+      text-decoration: none; border-radius: 5px; font-weight: bold; margin: 10px 5px; } /* Important reminders */ .reminders-box { background-color: #fff8e1;
+      border: 2px solid #ffc107; border-radius: 8px; padding: 20px; margin: 25px 0; } .reminders-box h6 { color: #f57c00; font-size: 16px; font-weight: bold;
+      margin: 0 0 15px 0; } .reminder-item { padding: 10px 0; border-bottom: 1px dashed #ffe082; color: #856404; } .reminder-item:last-child { border-bottom:
+      none; } .reminder-item p { margin: 5px 0; } /* Contact info */ .contact-box { background: linear-gradient(to right, #e3f2fd 0%, #bbdefb 100%);
+      border-radius: 8px; padding: 20px; margin: 25px 0; text-align: center; } .contact-box p { margin: 8px 0; color: #1565c0; } .contact-box strong { color:
+      #0d47a1; font-size: 16px; } /* Utility classes */ .center { margin: auto; } .divider { border: 0.5px solid #4CAF50; margin-bottom: 15px; height: 0; } /*
+      Footer styles */ .footer { clear: both; margin-top: 10px; text-align: center; width: 100%; } .footer-text { padding: 20px 10px 10px 10px; font-size: 12px;
+      line-height: 18px; color: #666666; text-align: center; font-weight: normal; } .footer-address { padding: 10px; color: #999999; font-size: 12px;
+      text-align: center; } .footer-copyright { padding: 0px 40px 40px 40px; font-size: 12px; line-height: 18px; color: #666666; text-align: center;
+      font-weight: normal; } /* Mobile responsive */ @media only screen and (max-width: 620px) { .body h1 { font-size: 28px !important; margin-bottom: 10px
+      !important; } .body p, .body ul, .body ol, .body td, .body span, .body a { font-size: 16px !important; } .wrapper, .article { padding: 10px !important; }
+      .content { padding: 0 !important; } .container { padding: 0 !important; width: 100% !important; } .main { border-left-width: 0 !important; border-radius:
+      0 !important; border-right-width: 0 !important; } .detail-row { padding: 12px; } .btn-add-calendar { display: block; width: 90%; margin: 10px auto; } }
+    </style>
+  </head>
+
+  <body>
+    <table role='presentation' class='body' bgcolor='#f6f6f6'>
+      <tr>
+        <td>&nbsp;</td>
+        <td class='container' width='580' valign='top'>
+          <div class='content'>
+            <!-- START CENTERED WHITE CONTAINER -->
+            <table role='presentation' class='main'>
+              <!-- HEADER -->
+              <tr>
+                <td class='header-box' valign='top'>
+                  <div class='header-icon'>✓</div>
+                  <h5><strong>Lịch hẹn đã được xác nhận</strong></h5>
+                </td>
+              </tr>
+              <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td class='wrapper' valign='top'>
+                  <table role='presentation'>
+                    <tr>
+                      <td valign='top'>
+                        <div style='text-align: center;'>
+                          <span class='confirmed-badge'>✓ ĐÃ XÁC NHẬN</span>
+                        </div>
+
+                        <p>Xin chào <strong>{{patientName}}</strong>,</p>
+
+                        <!-- Success Message -->
+                        <div class='success-message'>
+                          <h6>🎉 Tuyệt vời!</h6>
+                          <p>Bác sĩ <strong>{{doctorName}}</strong> đã xác nhận lịch hẹn của bạn.</p>
+                          <p>Chúng tôi rất mong được gặp bạn!</p>
+                        </div>
+
+                        <!-- Appointment Details -->
+                        <div class='appointment-card'>
+                          <h6>📋 Thông tin lịch khám</h6>
+
+                          <div class='detail-row'>
+                            <span class='icon'>👨‍⚕️</span>
+                            <div class='content'>
+                              <span class='label'>Bác sĩ</span>
+                              <span class='value'>{{doctorName}}</span>
+                            </div>
+                          </div>
+
+                          <div class='detail-row'>
+                            <span class='icon'>🕐</span>
+                            <div class='content'>
+                              <span class='label'>Thời gian</span>
+                              <span class='value'>{{time}} - {{date}}</span>
+                            </div>
+                          </div>
+
+                          <div class='detail-row'>
+                            <span class='icon'>📍</span>
+                            <div class='content'>
+                              <span class='label'>Địa điểm</span>
+                              <span class='value'>{{address}}</span>
+                            </div>
+                          </div>
+
+                          <div class='detail-row'>
+                            <span class='icon'>🏥</span>
+                            <div class='content'>
+                              <span class='label'>Hình thức khám</span>
+                              <span class='value'>{{appointmentType}}</span>
+                            </div>
+                          </div>
+
+                          <div class='detail-row'>
+                            <span class='icon'>💰</span>
+                            <div class='content'>
+                              <span class='label'>Chi phí</span>
+                              <span class='value'>{{price}} VNĐ</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Add to Calendar -->
+                        <div class='calendar-section'>
+                          <p style='margin: 0 0 15px 0; color: #1976D2;'><strong>Lưu lịch hẹn vào Calendar</strong></p>
+                          <p style='font-size: 13px; color: #666; margin-bottom: 15px;'>Nhận nhắc nhở tự động trước khi đến lịch hẹn</p>
+                          <a href='{{addToGoogleCalendarUrl}}' class='btn-add-calendar'>+ Google Calendar</a>
+                          <a href='{{addToOutlookCalendarUrl}}' class='btn-add-calendar'>+ Outlook</a>
+                        </div>
+
+                        <!-- Important Reminders -->
+                        <div class='reminders-box'>
+                          <h6>Lưu ý quan trọng</h6>
+
+                          <div class='reminder-item'>
+                            <p><strong>Đến sớm 10-15 phút</strong></p>
+                            <p style='font-size: 13px;'>Để hoàn tất thủ tục và không làm trễ lịch khám</p>
+                          </div>
+
+                          <div class='reminder-item'>
+                            <p><strong>Mang theo giấy tờ</strong></p>
+                            <p style='font-size: 13px;'>CMND/CCCD, thẻ bảo hiểm y tế (nếu có), hồ sơ bệnh án cũ</p>
+                          </div>
+
+                          <div class='reminder-item'>
+                            <p><strong>Danh sách thuốc đang dùng</strong></p>
+                            <p style='font-size: 13px;'>Mang theo đơn thuốc hoặc danh sách các loại thuốc bạn đang sử dụng</p>
+                          </div>
+
+                          <div class='reminder-item'>
+                            <p><strong>Thay đổi lịch hẹn</strong></p>
+                            <p style='font-size: 13px;'>Vui lòng thông báo trước ít nhất 24 giờ nếu cần hủy hoặc đổi lịch</p>
+                          </div>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class='contact-box'>
+                          <p><strong>Cần hỗ trợ?</strong></p>
+                          <p>Hotline: <strong>0835090938</strong></p>
+                          <p>Email: <strong>phamthiendong2004@gmail.com</strong></p>
+                          <p style='font-size: 12px; margin-top: 10px;'>Làm việc: Thứ 2 - Thứ 7 (8:00 - 20:00)</p>
+                        </div>
+
+                        <p style='font-size: 14px; text-align: center; color: #666; margin-top: 30px;'>
+                          Chúng tôi rất mong được chăm sóc sức khỏe cho bạn!
+                        </p>
+
+                        <p style='font-size: 14px; margin-bottom: 0;'>
+                          Trân trọng,
+                          <br />
+                          CLINIC CARE
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- END MAIN CONTENT AREA -->
+            </table>
+            <!-- END CENTERED WHITE CONTAINER -->
+
+            <!-- START FOOTER -->
+            <div class='footer'>
+              <table role='presentation'>
+                <tr>
+                  <td class='footer-text'>
+                    <p style='margin: 0;'>Email này được gửi từ <strong>no-reply@npis.com</strong></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='footer-address' valign='top' align='center'>
+                    <span class='apple-link'>120, Hoàng Minh Thảo, Đà Nẵng, Việt Nam</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='footer-copyright'>
+                    <p style='margin: 0;'>Copyright &copy; 2025 <b>CLINIC CARE</b>, All Rights Reserved.</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- END FOOTER -->
+          </div>
+        </td>
+        <td valign='top'>&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+{{!-- <html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>CLINIC CARE - BÁC SĨ ĐÃ XÁC NHẬN LỊCH HẸN</title>
+    <style>
+      /* Base styles */ body { line-height: 1.5; background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px;
+      margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } /* Table styles */ table { border-collapse: separate;
+      mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; } td { font-family: sans-serif; vertical-align: top; } /* Container styles */ .container {
+      display: block; max-width: 580px; padding: 10px; width: 580px; margin: 0 auto; } .content { box-sizing: border-box; display: block; margin: 0 auto;
+      max-width: 580px; padding: 10px; } .main { background: #ffffff; border-radius: 3px; } .wrapper { box-sizing: border-box; padding: 40px; } /* Header */
+      .header-box { background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); color: white; padding: 30px; text-align: center; border-radius: 3px 3px 0 0;
+      } .header-box h5 { color: white; margin: 0; font-size: 24px !important; } .header-icon { font-size: 48px; margin-bottom: 10px; } /* Text styles */ h5 {
+      font-family: sans-serif; font-size: 18px !important; font-weight: normal; margin: 0 0 15px 0; text-align: center; } p { font-family: sans-serif;
+      font-weight: normal; margin: 0 0 15px 0; } /* Confirmed badge */ .confirmed-badge { display: inline-block; background-color: #4CAF50; color: white;
+      padding: 10px 25px; border-radius: 30px; font-size: 16px; font-weight: bold; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3); } /*
+      Success message box */ .success-message { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 2px solid #4CAF50; border-radius: 10px;
+      padding: 25px; margin: 25px 0; text-align: center; } .success-message h6 { color: #2e7d32; font-size: 20px; font-weight: bold; margin: 0 0 10px 0; }
+      .success-message p { color: #388e3c; margin: 5px 0; font-size: 15px; } /* Appointment details card */ .appointment-card { background: #ffffff; border: 2px
+      solid #4CAF50; border-radius: 12px; padding: 25px; margin: 25px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); } .appointment-card h6 { margin: 0 0 20px 0;
+      color: #4CAF50; font-size: 18px; font-weight: bold; text-align: center; padding-bottom: 15px; border-bottom: 2px solid #e8f5e9; } .detail-row {
+      background-color: #f9f9f9; padding: 15px; margin: 12px 0; border-radius: 8px; border-left: 4px solid #4CAF50; display: table; width: 100%; box-sizing:
+      border-box; } .detail-row .icon { font-size: 24px; margin-right: 10px; vertical-align: middle; } .detail-row .content { display: inline-block;
+      vertical-align: middle; } .detail-row .label { color: #666; font-size: 13px; display: block; margin-bottom: 3px; } .detail-row .value { font-size: 16px;
+      font-weight: bold; color: #333; display: block; } /* Calendar add button */ .calendar-section { background-color: #f0f8ff; border-radius: 8px; padding:
+      20px; margin: 25px 0; text-align: center; } .btn-add-calendar { display: inline-block; background-color: #2196F3; color: white; padding: 12px 30px;
+      text-decoration: none; border-radius: 5px; font-weight: bold; margin: 10px 5px; } /* Important reminders */ .reminders-box { background-color: #fff8e1;
+      border: 2px solid #ffc107; border-radius: 8px; padding: 20px; margin: 25px 0; } .reminders-box h6 { color: #f57c00; font-size: 16px; font-weight: bold;
+      margin: 0 0 15px 0; } .reminder-item { padding: 10px 0; border-bottom: 1px dashed #ffe082; color: #856404; } .reminder-item:last-child { border-bottom:
+      none; } .reminder-item p { margin: 5px 0; } /* Contact info */ .contact-box { background: linear-gradient(to right, #e3f2fd 0%, #bbdefb 100%);
+      border-radius: 8px; padding: 20px; margin: 25px 0; text-align: center; } .contact-box p { margin: 8px 0; color: #1565c0; } .contact-box strong { color:
+      #0d47a1; font-size: 16px; } /* Utility classes */ .center { margin: auto; } .divider { border: 0.5px solid #4CAF50; margin-bottom: 15px; height: 0; } /*
+      Footer styles */ .footer { clear: both; margin-top: 10px; text-align: center; width: 100%; } .footer-text { padding: 20px 10px 10px 10px; font-size: 12px;
+      line-height: 18px; color: #666666; text-align: center; font-weight: normal; } .footer-address { padding: 10px; color: #999999; font-size: 12px;
+      text-align: center; } .footer-copyright { padding: 0px 40px 40px 40px; font-size: 12px; line-height: 18px; color: #666666; text-align: center;
+      font-weight: normal; } /* Mobile responsive */ @media only screen and (max-width: 620px) { .body h1 { font-size: 28px !important; margin-bottom: 10px
+      !important; } .body p, .body ul, .body ol, .body td, .body span, .body a { font-size: 16px !important; } .wrapper, .article { padding: 10px !important; }
+      .content { padding: 0 !important; } .container { padding: 0 !important; width: 100% !important; } .main { border-left-width: 0 !important; border-radius:
+      0 !important; border-right-width: 0 !important; } .detail-row { padding: 12px; } .btn-add-calendar { display: block; width: 90%; margin: 10px auto; } }
+    </style>
+  </head>
+
+  <body>
+    <table role='presentation' class='body' bgcolor='#f6f6f6'>
+      <tr>
+        <td>&nbsp;</td>
+        <td class='container' width='580' valign='top'>
+          <div class='content'>
+            <table role='presentation' class='main'>
+              <tr>
+                <td class='header-box' valign='top'>
+                  <div class='header-icon'>✓</div>
+                  <h5><strong>Lịch hẹn đã được xác nhận</strong></h5>
+                </td>
+              </tr>
+              <tr>
+                <td class='wrapper' valign='top'>
+                  <table role='presentation'>
+                    <tr>
+                      <td valign='top'>
+                        <div style='text-align: center;'>
+                          <span class='confirmed-badge'>✓ ĐÃ XÁC NHẬN</span>
+                        </div>
+
+                        <p>Xin chào <strong>{{patientName}}</strong>,</p>
+
+                        <div class='success-message'>
+                          <h6>🎉 Tuyệt vời!</h6>
+                          <p>Bác sĩ <strong>{{doctorName}}</strong> đã xác nhận lịch hẹn của bạn.</p>
+                          <p>Chúng tôi rất mong được gặp bạn!</p>
+                        </div>
+
+                        <div class='appointment-card'>
+                          <h6>📋 Thông tin lịch khám</h6>
+
+                          <div class='detail-row'>
+                            <span class='icon'>👨‍⚕️</span>
+                            <div class='content'>
+                              <span class='label'>Bác sĩ</span>
+                              <span class='value'>{{doctorName}}</span>
+                            </div>
+                          </div>
+
+                          <div class='detail-row'>
+                            <span class='icon'>🕐</span>
+                            <div class='content'>
+                              <span class='label'>Thời gian</span>
+                              <span class='value'>{{time}} - {{date}}</span>
+                            </div>
+                          </div>
+
+                          {{#if isOnline}}
+                            <div class='detail-row' style='background-color: #e3f2fd; border-left: 4px solid #2196F3;'>
+                              <span class='icon'>💻</span>
+                              <div class='content'>
+                                <span class='label' style='color: #0d47a1;'>Phòng khám Online</span>
+                                <span class='value' style='margin-bottom: 8px; display: block;'>Link Video Call đã sẵn sàng</span>
+                                <a
+                                  href='{{meetingLink}}'
+                                  style='display: inline-block; background-color: #2196F3; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 14px;'
+                                >
+                                  👉 Bấm vào đây để gặp Bác sĩ
+                                </a>
+                              </div>
+                            </div>
+                          {{else}}
+                            <div class='detail-row'>
+                              <span class='icon'>📍</span>
+                              <div class='content'>
+                                <span class='label'>Địa điểm</span>
+                                <span class='value'>{{address}}</span>
+                              </div>
+                            </div>
+                          {{/if}}
+                          <div class='detail-row'>
+                            <span class='icon'>🏥</span>
+                            <div class='content'>
+                              <span class='label'>Hình thức khám</span>
+                              <span class='value'>{{appointmentType}}</span>
+                            </div>
+                          </div>
+
+                          <div class='detail-row'>
+                            <span class='icon'>💰</span>
+                            <div class='content'>
+                              <span class='label'>Chi phí</span>
+                              <span class='value'>{{price}} VNĐ</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class='calendar-section'>
+                          <p style='margin: 0 0 15px 0; color: #1976D2;'><strong>Lưu lịch hẹn vào Calendar</strong></p>
+                          <p style='font-size: 13px; color: #666; margin-bottom: 15px;'>Nhận nhắc nhở tự động trước khi đến lịch hẹn</p>
+                          <a href='{{addToGoogleCalendarUrl}}' class='btn-add-calendar'>+ Google Calendar</a>
+                          <a href='{{addToOutlookCalendarUrl}}' class='btn-add-calendar'>+ Outlook</a>
+                        </div>
+
+                        <div class='reminders-box'>
+                          <h6>Lưu ý quan trọng</h6>
+
+                          <div class='reminder-item'>
+                            <p><strong>Đến sớm 10-15 phút</strong></p>
+                            <p style='font-size: 13px;'>Để hoàn tất thủ tục và không làm trễ lịch khám</p>
+                          </div>
+
+                          <div class='reminder-item'>
+                            <p><strong>Mang theo giấy tờ</strong></p>
+                            <p style='font-size: 13px;'>CMND/CCCD, thẻ bảo hiểm y tế (nếu có), hồ sơ bệnh án cũ</p>
+                          </div>
+
+                          <div class='reminder-item'>
+                            <p><strong>Danh sách thuốc đang dùng</strong></p>
+                            <p style='font-size: 13px;'>Mang theo đơn thuốc hoặc danh sách các loại thuốc bạn đang sử dụng</p>
+                          </div>
+
+                          <div class='reminder-item'>
+                            <p><strong>Thay đổi lịch hẹn</strong></p>
+                            <p style='font-size: 13px;'>Vui lòng thông báo trước ít nhất 24 giờ nếu cần hủy hoặc đổi lịch</p>
+                          </div>
+                        </div>
+
+                        <div class='contact-box'>
+                          <p><strong>Cần hỗ trợ?</strong></p>
+                          <p>Hotline: <strong>0835090938</strong></p>
+                          <p>Email: <strong>phamthiendong2004@gmail.com</strong></p>
+                          <p style='font-size: 12px; margin-top: 10px;'>Làm việc: Thứ 2 - Thứ 7 (8:00 - 20:00)</p>
+                        </div>
+
+                        <p style='font-size: 14px; text-align: center; color: #666; margin-top: 30px;'>
+                          Chúng tôi rất mong được chăm sóc sức khỏe cho bạn!
+                        </p>
+
+                        <p style='font-size: 14px; margin-bottom: 0;'>
+                          Trân trọng,
+                          <br />
+                          CLINIC CARE
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <div class='footer'>
+              <table role='presentation'>
+                <tr>
+                  <td class='footer-text'>
+                    <p style='margin: 0;'>Email này được gửi từ <strong>no-reply@cliniccare.com</strong></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='footer-address' valign='top' align='center'>
+                    <span class='apple-link'>120, Hoàng Minh Thảo, Đà Nẵng, Việt Nam</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='footer-copyright'>
+                    <p style='margin: 0;'>Copyright &copy; 2025 <b>CLINIC CARE</b>, All Rights Reserved.</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </td>
+        <td valign='top'>&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html> --}}

@@ -1,0 +1,62 @@
+stages:
+  - build
+
+build-development:
+  stage: build
+  only:
+    - develop
+  tags:
+    - Backend-Runner
+  script:
+    - echo "Building the code..."
+    - echo $CI_PROJECT_DIR
+    - yarn
+    - cp .env.develop.example .env
+    - sed -i "s~CI_DEV_API_SERVER_URL~$CI_DEV_API_SERVER_URL~g" .env
+    - sed -i "s~CI_DEV_AWS_ACCESS_KEY_ID~$CI_DEV_AWS_ACCESS_KEY_ID~g" .env
+    - sed -i "s~CI_DEV_AWS_BUCKET_NAME~$CI_DEV_AWS_BUCKET_NAME~g" .env
+    - sed -i "s~CI_DEV_AWS_ENDPOINT~$CI_DEV_AWS_ENDPOINT~g" .env
+    - sed -i "s~CI_DEV_AWS_REGION~$CI_DEV_AWS_REGION~g" .env
+    - sed -i "s~CI_DEV_AWS_SECRET_ACCESS_KEY~$CI_DEV_AWS_SECRET_ACCESS_KEY~g" .env
+    - sed -i "s~CI_DEV_MONGO_URI~$CI_DEV_MONGO_URI~g" .env
+    - sed -i "s~CI_DEV_SMTP_EMAIL~$CI_DEV_SMTP_EMAIL~g" .env
+    - sed -i "s~CI_DEV_SMTP_HOST~$CI_DEV_SMTP_HOST~g" .env
+    - sed -i "s~CI_DEV_SMTP_PASSWORD~$CI_DEV_SMTP_PASSWORD~g" .env
+    - sed -i "s~CI_DEV_SMTP_PORT~$CI_DEV_SMTP_PORT~g" .env
+    - sed -i "s~CI_DEV_SMTP_USER~$CI_DEV_SMTP_USER~g" .env
+    - sed -i "s~CI_DEV_TWILIO_ACCESS_TOKEN~$CI_DEV_TWILIO_ACCESS_TOKEN~g" .env
+    - sed -i "s~CI_DEV_TWILIO_ACCOUNT_ID~$CI_DEV_TWILIO_ACCOUNT_ID~g" .env
+    - sed -i "s~CI_DEV_TWILIO_PHONE_NUMBER~$CI_DEV_TWILIO_PHONE_NUMBER~g" .env
+    - yarn build
+    - rsync -avh $CI_PROJECT_DIR /srv/Backend
+    - pm2 restart 0
+
+build-production:
+  stage: build
+  only:
+    - master
+  tags:
+    - Backend-Runner
+  script:
+    - echo "Building the code..."
+    - echo $CI_PROJECT_DIR
+    - yarn
+    - cp .env.prod.example .env
+    - sed -i "s~CI_PROD_API_SERVER_URL~$CI_PROD_API_SERVER_URL~g" .env
+    - sed -i "s~CI_PROD_AWS_ACCESS_KEY_ID~$CI_PROD_AWS_ACCESS_KEY_ID~g" .env
+    - sed -i "s~CI_PROD_AWS_BUCKET_NAME~$CI_PROD_AWS_BUCKET_NAME~g" .env
+    - sed -i "s~CI_PROD_AWS_ENDPOINT~$CI_PROD_AWS_ENDPOINT~g" .env
+    - sed -i "s~CI_PROD_AWS_REGION~$CI_PROD_AWS_REGION~g" .env
+    - sed -i "s~CI_PROD_AWS_SECRET_ACCESS_KEY~$CI_PROD_AWS_SECRET_ACCESS_KEY~g" .env
+    - sed -i "s~CI_PROD_MONGO_URI~$CI_PROD_MONGO_URI~g" .env
+    - sed -i "s~CI_PROD_SMTP_EMAIL~$CI_PROD_SMTP_EMAIL~g" .env
+    - sed -i "s~CI_PROD_SMTP_HOST~$CI_PROD_SMTP_HOST~g" .env
+    - sed -i "s~CI_PROD_SMTP_PASSWORD~$CI_PROD_SMTP_PASSWORD~g" .env
+    - sed -i "s~CI_PROD_SMTP_PORT~$CI_PROD_SMTP_PORT~g" .env
+    - sed -i "s~CI_PROD_SMTP_USER~$CI_PROD_SMTP_USER~g" .env
+    - sed -i "s~CI_PROD_TWILIO_ACCESS_TOKEN~$CI_PROD_TWILIO_ACCESS_TOKEN~g" .env
+    - sed -i "s~CI_PROD_TWILIO_ACCOUNT_ID~$CI_PROD_TWILIO_ACCOUNT_ID~g" .env
+    - sed -i "s~CI_PROD_TWILIO_PHONE_NUMBER~$CI_PROD_TWILIO_PHONE_NUMBER~g" .env
+    - yarn build
+    - rsync -avh $CI_PROJECT_DIR /srv/Backend-Prod
+    - pm2 restart prod
